@@ -29,7 +29,7 @@ Ren19::Ren19(int16_t axis, int16_t maPin, int16_t sloPin) {
 uint8_t Ren19::crc6(uint64_t data) {
   uint8_t crc;
   uint64_t idx;
-  crc = ((data >> 18) & 0b111111);
+  idx = ((data >> 18) & 0b111111);
   crc = ((data >> 12) & 0b111111);
   idx = crc ^ CRC6[idx];
   crc = ((data >> 6) & 0b111111);
